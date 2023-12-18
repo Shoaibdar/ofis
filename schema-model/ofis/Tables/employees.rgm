@@ -1,0 +1,31 @@
+table "ofis"."employees" {
+  columns = (
+    column "employee_id" {
+      type = int
+      null = NOT NULL
+    }
+    column "first_name" {
+      type = varchar(50)
+    }
+    column "last_name" {
+      type = varchar(50)
+    }
+    column "birth_date" {
+      type = date
+    }
+    column "hire_date" {
+      type = date
+    }
+    column "email" {
+      type = varchar(100)
+    }
+  )
+  primaryKey = {
+    columns = [
+      employee_id
+    ]
+    name = "PRIMARY"
+    objectType = primaryKey
+  }
+}
+

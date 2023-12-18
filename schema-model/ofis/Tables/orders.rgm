@@ -1,0 +1,29 @@
+table "ofis"."orders" {
+  columns = (
+    column "order_id" {
+      type = int
+      null = NOT NULL
+    }
+    column "customer_id" {
+      type = int
+    }
+    column "order_date" {
+      type = date
+    }
+    column "total_amount" {
+      type = decimal(10,2)
+    }
+    column "status" {
+      type = varchar(20)
+      default = 'Pending'
+    }
+  )
+  primaryKey = {
+    columns = [
+      order_id
+    ]
+    name = "PRIMARY"
+    objectType = primaryKey
+  }
+}
+

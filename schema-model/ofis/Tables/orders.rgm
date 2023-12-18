@@ -17,6 +17,9 @@ table "ofis"."orders" {
       type = varchar(20)
       default = 'Pending'
     }
+    column "foo" {
+      type = int
+    }
   )
   primaryKey = {
     columns = [
